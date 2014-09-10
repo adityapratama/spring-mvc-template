@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.sap.belajar</groupId>
+  <artifactId>belajar</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>belajar</name>
+  <description>belajar spring mvc</description>
+  <modules>
+  	<module>belajar-config</module>
+  	<module>belajar-domain</module>
+  	<module>belajar-service</module>
+  	<module>belajar-web</module>
+  </modules>
+  
+  <properties>
+  		<commons-logging.version>1.1.1</commons-logging.version>
+		<org.slf4j.version>1.7.5</org.slf4j.version>
+		
+  		<!-- konfigurasi database development -->
+		<db.driver>com.mysql.jdbc.Driver</db.driver>
+		<db.url><![CDATA[jdbc:mysql://localhost/belajar_development?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull]]></db.url>
+		<db.username>root</db.username>
+		<db.password></db.password>
+  </properties>
+  
+  <dependencies>
+  		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>${commons-logging.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${org.slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${org.slf4j.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>log4j-over-slf4j</artifactId>
+			<version>${org.slf4j.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+  </dependencies>
+</project>
